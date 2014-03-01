@@ -271,21 +271,298 @@
       ]
     }
   ],
-
-  "Mathematics":[
+  "Mathematics": [
     {
-      "id": "221",
-      "name": "Calculus I",
+      "id": "211",
+      "name": "Calculus",
+      "prerequisites": []
+    },
+    {
+      "id": "213",
+      "name": "Calculus and Introduction to Differential Equations",
       "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "211",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "221",
+          "or": [
+            "0"
+          ]
+        }
       ]
     },
     {
+      "id": "221",
+      "name": "Calculus and Analytic Geometry 1",
+      "prerequisites": []
+    },
+    {
       "id": "222",
-      "name": "Calculus II",
+      "name": "Calculus and Analytic Geometry 2",
       "prerequisites": [
         {
           "department": "Mathematics",
           "id": "221"
+        }
+      ]
+    },
+    {
+      "id": "234",
+      "name": " Calculus--Functions of Several Variables",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "222"
+        }
+      ]
+    },
+    {
+      "id": "240",
+      "name": "Introduction to Discrete Mathematics",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "221"
+        }
+      ]
+    },
+    {
+      "id": "303",
+      "name": "Theory of Interest and Life Insurance",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "234"
+        }
+      ]
+    },
+    {
+      "id": "309",
+      "name": "Introduction to Probability and Mathematical Statistics I",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "234"
+        }
+      ]
+    },
+    {
+      "id": "310",
+      "name": "Introduction to Probability and Mathematical Statistics II",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "309",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "431",
+          "or": [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "319",
+      "name": "Techniques in Ordinary Differential Equations",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "222"
+        }
+      ]
+    },
+    {
+      "id": "320",
+      "name": "Linear Algebra and Differential Equations",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "222"
+        }
+      ]
+    },
+    {
+      "id": "321",
+      "name": "Applied Mathematical Analysis",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "223",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "234",
+          "or": [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "322",
+      "name": "Applied Mathematical Analysis",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "319"
+        },
+        {
+          "department": "Mathematics",
+          "id": "321"
+        }
+      ]
+    },
+    {
+      "id": "340",
+      "name": "Elementary Matrix and Linear Algebra",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "234",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "222",
+          "or": [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "341",
+      "name": "Linear Algebra",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "234"
+        }
+      ]
+    },
+    {
+      "id": "371",
+      "name": "Basic Concepts of Math",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "340"
+        }
+      ]
+    },
+    {
+      "id": "376",
+      "name": "Topics in Multi-Variable Calculus and Differential Equations",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "375"
+        }
+      ]
+    },
+    {
+      "id": "421",
+      "name": "The Theory of Single Variable Calculus",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "234"
+        }
+      ]
+    },
+    {
+      "id": "431",
+      "name": "Introduction to the Theory of Probability",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "223",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "234",
+          "or": [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "435",
+      "name": "Introduction to Cryptography",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "320",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "340",
+          "or": [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "441",
+      "name": "Introduction to Modern Algebra",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "340",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "341",
+          "or": [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "461",
+      "name": "College Geometry I",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "222",
+          "or": [
+            "1"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "240",
+          "or": [
+            "0"
+          ]
         }
       ]
     }
