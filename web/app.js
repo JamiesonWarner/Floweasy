@@ -55,6 +55,13 @@ Raphael.fn.connection = function (obj1, obj2, line, bg) {
     }
 };
 
+Raphael.el.bounce = function() {
+    this.transform("");
+    this.stop().animate({transform: "s1.1 1.1"}, 50, "elastic", function() {
+        this.stop().animate({transform: ""}, 500, "elastic");
+    });
+}
+
 var test;
 
 /**
@@ -90,20 +97,28 @@ function constructBox(jsonData, x, y) {
     combined.mouseover(function() {
         for (var i = 0; i < box["connections"].length; i++) {
             var line = box["connections"][i].line;
-            test = box["connections"];
-            line.attr({"stroke":"#00F", "stroke-width":4});
+            line.attr({"stroke":"#FFF", "stroke-width":4});
         }
     });
     combined.mouseout(function() {
         for (var i = 0; i < box["connections"].length; i++) {
             var line = box["connections"][i].line;
-            line.attr({"stroke":"#FFF", "stroke-width":1});
+            line.attr({"stroke":"#BBB", "stroke-width":1});
         }
     });
     box.mouseover(function() {
-        box.stop().animate({transform: "s1.1 1.1"}, 50, "elastic", function() {
-            box.stop().animate({transform: ""}, 500, "elastic");
-        });
+        for (var i = 0; i < box["connections"].length; i++) {
+            var connection = box["connections"][i];
+            test = box;
+            if (connection.to == box) {
+                connection.from.bounce();
+            }
+            if (connection.from == box) {
+                connection.to.bounce();
+            }
+        }
+
+        box.bounce();
     });
 
     combined.click(function() {
@@ -117,11 +132,11 @@ function constructBox(jsonData, x, y) {
 function connectBoxes(box1, box2, orPartner) {
     var connection;
     if (!orPartner) {
-        connection = r.connection(box1, box2, "#fff");
+        connection = r.connection(box1, box2, "#BBB");
         connections.push(connection);
     }
     else {
-        connection = r.connection(box1, box2, "#000", "#fff");
+        connection = r.connection(box1, box2, "#000", "#BBB");
         connections.push(connection);
     }
     box1["connections"].push(connection);
