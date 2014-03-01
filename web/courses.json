@@ -1,0 +1,275 @@
+{
+  "departments": [],
+  "courses": [
+    {
+      "id": "240",
+      "name": "Introduction to Discrete Mathematics",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "221"
+        }
+      ]
+    },
+    {
+      "id": "252",
+      "name": "Introduction to Computer Engineering",
+      "prerequisites": []
+    },
+    {
+      "id": "298",
+      "name": "Directed Study in Computer Science",
+      "prerequisites": []
+    },
+    {
+      "id": "302",
+      "name": "Introduction to Programming",
+      "prerequisites": []
+    },
+    {
+      "id": "310",
+      "name": "Problem Solving Using Computers",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "222"
+        }
+      ]
+    },
+    {
+      "id": "352",
+      "name": "Digital System Fundamentals",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "252"
+        }
+      ]
+    },
+    {
+      "id": "354",
+      "name": "Machine Organization and Programming",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "302"
+        },
+        {
+          "department": "Computer Science",
+          "id": "252"
+        }
+      ]
+    },
+    {
+      "id": "367",
+      "name": "Introduction to Data Structures",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "302"
+        }
+      ]
+    },
+    {
+      "id": "368",
+      "name": "C++ for Java Programmers",
+      "prerequisites": []
+    },
+    {
+      "id": "369",
+      "name": "Web Programming",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "367"
+        }
+      ]
+    },
+    {
+      "id": "371",
+      "name": "Technology of Computer-Based Business Systems",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "302"
+        }
+      ]
+    },
+    {
+      "id": "407",
+      "name": "Foundations of Mobile Systems and Applications",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "367"
+        }
+      ]
+    },
+    {
+      "id": "412",
+      "name": "Introduction to Numerical Methods",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "222"
+        },
+        {
+          "department": "Computer Science",
+          "id": "240",
+          "or": "2"
+        },
+        {
+          "department": "Mathematics",
+          "id": "234",
+          "or": "1"
+        },
+        {
+          "department": "Computer Science",
+          "id": "302"
+        }
+      ]
+    },
+    {
+      "id": "435",
+      "name": "Introduction to Cryptography",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "320",
+          "or": "1"
+        },
+        {
+          "department": "Mathematics",
+          "id": "340",
+          "or": "0"
+        }
+      ]
+    },
+    {
+      "id": "475",
+      "name": "Introduction to Combinatorics",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "320",
+          "or": "1"
+        },
+        {
+          "department": "Mathematics",
+          "id": "340",
+          "or": "0"
+        }
+      ]
+    },
+    {
+      "id": "513",
+      "name": "Numerical Linear Algebra",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "340"
+        },
+        {
+          "department": "Computer Science",
+          "id": "302"
+        }
+      ]
+    },
+    {
+      "id": "520",
+      "name": "Introduction to Theory of Computing",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "240"
+        },
+        {
+          "department": "Computer Science",
+          "id": "367"
+        }
+      ]
+    },
+    {
+      "id": "525",
+      "name": "Linear Programming Methods",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "320",
+          "or": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "340",
+          "or": [
+            "0",
+            "2"
+          ]
+        },
+        {
+          "department": "Mathematics",
+          "id": "443",
+          "or": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "536",
+      "name": "Introduction to Programming Languages and Compilers",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "354"
+        },
+        {
+          "department": "Computer Science",
+          "id": "367"
+        }
+      ]
+    },
+    {
+      "id": "537",
+      "name": "Introduction to Operating Systems",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "354"
+        },
+        {
+          "department": "Computer Science",
+          "id": "367"
+        }
+      ]
+    },
+    {
+      "id": "540",
+      "name": "Introduction to Artificial Intelligence",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "367"
+        }
+      ]
+    },
+    {
+      "id": "552",
+      "name": "Introduction to Computer Architecture",
+      "prerequisites": [
+        {
+          "department": "Computer Science",
+          "id": "352"
+        },
+        {
+          "department": "Computer Science",
+          "id": "354"
+        }
+      ]
+    }
+  ]
+}
