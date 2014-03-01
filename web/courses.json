@@ -1,6 +1,5 @@
 {
-  "departments": [],
-  "courses": [
+  "Computer Science": [
     {
       "id": "240",
       "name": "Introduction to Discrete Mathematics",
@@ -268,6 +267,25 @@
         {
           "department": "Computer Science",
           "id": "354"
+        }
+      ]
+    }
+  ],
+
+  "Mathematics":[
+    {
+      "id": "221",
+      "name": "Calculus I",
+      "prerequisites": [
+      ]
+    },
+    {
+      "id": "222",
+      "name": "Calculus II",
+      "prerequisites": [
+        {
+          "department": "Mathematics",
+          "id": "221"
         }
       ]
     }
