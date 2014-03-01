@@ -55,35 +55,82 @@ Raphael.fn.connection = function (obj1, obj2, line, bg) {
     }
 };
 
+var test;
+
 /**
  Construct a box containing class data. Returns a Raphael object.
 */
 function constructBox(jsonData, x, y) {
+    // Make box first
     var box;
-    if (x && y) {
-        box = r.rect(x, y, 128, 64, 6);
-    }
-    else {
-        box = r.rect(0, 0, 128, 64, 6);
-    }
+    box = r.rect(0, 0, 128, 156, 6);
+
+    box.attr({"x":x, "y": y});
+
+    // Make text next to layer on box
+    var textContent = jsonData['id'] + ": " + jsonData["name"];
+    var text = r.text(0,0,textContent);
+    text.attr({fill: '#fff', 'font-size': 16});
+    textWrap(text, 128-24);
+    text.attr({"x":x+12, "y": y+12, "cursor":"pointer"});
+    alignTop(text);
+    var jqueryText = $(text.node);
+    jqueryText.css("-webkit-user-select", "none");
+    jqueryText.css("-moz-user-select", "none");
+
+    // Finally adjust box height to fit to text
+    box.attr({"height":text.getBBox().height + 36});
+
+    box["connections"] = [];
+
+
+    // We want to treat mouse over events as combined for box and text
+    var combined =  r.set();
+    combined.push(box, text);
+    combined.mouseover(function() {
+        for (var i = 0; i < box["connections"].length; i++) {
+            var line = box["connections"][i].line;
+            test = box["connections"];
+            line.attr({"stroke":"#00F", "stroke-width":4});
+        }
+    });
+    combined.mouseout(function() {
+        for (var i = 0; i < box["connections"].length; i++) {
+            var line = box["connections"][i].line;
+            line.attr({"stroke":"#FFF", "stroke-width":1});
+        }
+    });
     box.mouseover(function() {
         box.stop().animate({transform: "s1.1 1.1"}, 50, "elastic", function() {
             box.stop().animate({transform: ""}, 500, "elastic");
         });
     });
 
-    box.click(function() {
+    combined.click(function() {
         // console.log("Click");
     });
+
+
     return box;
 }
 
 function connectBoxes(box1, box2, orPartner) {
+    var connection;
     if (!orPartner) {
-        connections.push(r.connection(box1, box2), "#fff");
+        connection = r.connection(box1, box2, "#fff");
+        connections.push(connection);
     }
     else {
-        connections.push(r.connection(box1, box2), "#000", "#fff");
+        connection = r.connection(box1, box2, "#000", "#fff");
+        connections.push(connection);
+    }
+    box1["connections"].push(connection);
+    box2["connections"].push(connection);
+}
+
+function refreshConnections() {
+    for (var i = connections.length; i--;) {
+        r.connection(connections[i]);
     }
 }
 
@@ -110,6 +157,45 @@ function getCourseJson(id, department) {
     }
     return found;
 }
+
+function alignTop(t) {
+    var b = t.getBBox();
+    var h = Math.abs(b.y2) - Math.abs(b.y) + 1;
+
+    t.attr({
+        'y': b.y + h
+    });
+}
+
+function textWrap(t, width) {
+    var content = t.attr("text");
+    var abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    t.attr({
+      'text-anchor' : 'start',
+      "text" : abc
+    });
+    var letterWidth = t.getBBox().width / abc.length;
+    t.attr({
+        "text" : content
+    });
+
+    var words = content.split(" ");
+    var x = 0, s = [];
+    for ( var i = 0; i < words.length; i++) {
+
+        var l = words[i].length;
+        if (x + (l * letterWidth) > width) {
+            s.push("\n");
+            x = 0;
+        }
+        x += l * letterWidth;
+        s.push(words[i] + " ");
+    }
+    t.attr({
+        "text" : s.join("")
+    });
+}
+
 
 function getCourseDepth(courseId, department) {
     // Recursive base case
@@ -167,19 +253,22 @@ function makeTree(jsonData) {
 
     // Make objects out of the data we have in a 1-d array
     var x_start = 50;
-    var y_start = 50;
     var x_separation = 200;
-    var y_separation = 100;
+    var y_current = 50;
+    var y_start = 50;
+    var y_spacing = 24;
     boxes = [];
     for (var i = 0; i < jsonColumns.length; i ++) {
+        y_current = y_start;
         var jsonColumn = jsonColumns[i];
         var colColor = Raphael.getColor();
         for (var j = 0; j < jsonColumn.length; j ++) {
             // TODO give this a sexy transition
             var newX = x_start + x_separation * i;
-            var newY = y_start + y_separation * j;
+            var newY = y_current;
             var newBox = constructBox(jsonColumn[j], newX, newY);
-            newBox.attr({fill: colColor, stroke: colColor, "fill-opacity": .4, "stroke-width": 2, cursor: "move"});
+            y_current += newBox.attr("height") + y_spacing;
+            newBox.attr({fill: colColor, stroke: colColor, "fill-opacity": .4, "stroke-width": 2, cursor: "pointer"});
             newBox.json = jsonColumn[j];
             boxes.push(newBox);
         }
@@ -201,6 +290,22 @@ function makeTree(jsonData) {
     }
 }
 
+/**
+ All-inclusive function for changing the department displayed.
+ Call this with the new department and it will reset everything, etc.
+*/
+function loadDepartment(department) {
+    r.clear();
+
+    currentDepartment = department;
+
+    // Make our tree
+    makeTree(coursesJson[department]);
+
+
+}
+
+
 
 
 var r;
@@ -208,10 +313,10 @@ var connections = [];
 var coursesJson;
 var currentDepartment = "Computer Science";
 var departments = [];
-var boxes;
+var boxes = [];
 
 window.onload = function () {
-    r = Raphael("holder", $('#holder').width(), 1024);
+    r = Raphael("holder", $('#holder').width(), 1300);
 
     $.getJSON( "courses.json", function( data ) {
         // Build our list of departments
@@ -221,9 +326,20 @@ window.onload = function () {
 
         // Set global reference to all course data
         coursesJson = data;
-
-        // Make our tree
-        makeTree(coursesJson[currentDepartment]);
     });
+
+    $("li a").click(function(e) {
+        $('html, body').animate({
+            scrollTop: $("#holder").offset().top
+        }, 2000);
+    });
+
+     $("#cs").click(function(e) {
+        loadDepartment("Computer Science");
+    });     
+     $("#math").click(function(e) {
+        loadDepartment("Mathematics");
+    });
+
 };
 
