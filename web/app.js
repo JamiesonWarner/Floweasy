@@ -114,13 +114,17 @@ function getCourseJson(id, department) {
 function getCourseDepth(courseId, department) {
     // Recursive base case
     var courseJson = getCourseJson(courseId, department);
+    if (courseJson == null) {
+        console.log("ERROR: course not found: " + courseId + " in " + department);
+        return 0;
+    }
     var prereqs = courseJson.prerequisites;
     if (prereqs.length == 0) {
         return 0;
     }
 
     var maxChildrenDepth = 0;
-    for (var i = 0; i < prereqs; i++) {
+    for (var i = 0; i < prereqs.length; i++) {
         var prereqObj = prereqs[i];
         var prereqDepth = getCourseDepth(prereqObj["id"],prereqObj["department"]);
         if (prereqDepth > maxChildrenDepth) {
@@ -131,29 +135,21 @@ function getCourseDepth(courseId, department) {
     return maxChildrenDepth + 1;
 }
 
+function findBox(courseId) {
+    for (var i = 0; i < boxes.length; i++) {
+        var box = boxes[i];
+        var boxJson = box["json"];
+        if (boxJson.id == courseId){
+            return box;
+        }
+    }
+    return null;
+}
+
 /**
  Builds a class tree from JSON data.
 */
 function makeTree(jsonData) {
-    var dragger = function () {
-        this.ox = this.type == "rect" ? this.attr("x") : this.attr("cx");
-        this.oy = this.type == "rect" ? this.attr("y") : this.attr("cy");
-        this.animate({"fill-opacity": .2}, 500);
-    },
-        move = function (dx, dy) {
-            var att = this.type == "rect" ? {x: this.ox + dx, y: this.oy + dy} : {cx: this.ox + dx, cy: this.oy + dy};
-            this.attr(att);
-            for (var i = connections.length; i--;) {
-                r.connection(connections[i]);
-            }
-            r.safari();
-        },
-        up = function () {
-            this.animate({"fill-opacity": 0}, 500);
-        },
-        connections = [];
-
-
     // 2-d array.
     // 1 array per column of the flowchart
     var jsonColumns = [];
@@ -174,7 +170,7 @@ function makeTree(jsonData) {
     var y_start = 50;
     var x_separation = 200;
     var y_separation = 100;
-    var boxes = [];
+    boxes = [];
     for (var i = 0; i < jsonColumns.length; i ++) {
         var jsonColumn = jsonColumns[i];
         var colColor = Raphael.getColor();
@@ -183,26 +179,39 @@ function makeTree(jsonData) {
             var newX = x_start + x_separation * i;
             var newY = y_start + y_separation * j;
             var newBox = constructBox(jsonColumn[j], newX, newY);
-            newBox.attr({fill: colColor, stroke: colColor, "fill-opacity": 0, "stroke-width": 2, cursor: "move"});
+            newBox.attr({fill: colColor, stroke: colColor, "fill-opacity": .4, "stroke-width": 2, cursor: "move"});
+            newBox.json = jsonColumn[j];
             boxes.push(newBox);
         }
     }
 
-    for (var i = 0, ii = boxes.length; i < ii; i++) {
-        boxes[i].drag(move, dragger, up);
+    // Now iterate through all the boxes and add their prereqs visually
+    for (var i = 0; i < boxes.length; i ++) {
+        var box = boxes[i];
+        var boxJson = box["json"];
+        var boxPrereqs = boxJson["prerequisites"];
+        for (var j = 0; j < boxPrereqs.length; j++) {
+            var prereqJson = boxPrereqs[j];
+            var prereqBox = findBox(prereqJson["id"]);
+            if (!prereqBox) {
+                continue;
+            }
+            connectBoxes(prereqBox, box);
+        }
     }
 }
 
 
 
 var r;
-var connections;
+var connections = [];
 var coursesJson;
 var currentDepartment = "Computer Science";
 var departments = [];
+var boxes;
 
 window.onload = function () {
-    r = Raphael("holder", $('#holder').width(), 600);
+    r = Raphael("holder", $('#holder').width(), 1024);
 
     $.getJSON( "courses.json", function( data ) {
         // Build our list of departments
