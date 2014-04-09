@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ssh hostgator 'rm -rf ~/public_html/floweasy/*'
+scp -r ~/projects/Floweasy/web/* hostgator:~/public_html/floweasy

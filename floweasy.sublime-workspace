@@ -1,0 +1,671 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pres",
+				"prerequisites"
+			],
+			[
+				"preq",
+				"prerequisites"
+			],
+			[
+				"getC",
+				"getCourseJson"
+			],
+			[
+				"jsonCo",
+				"jsonColumns"
+			],
+			[
+				"y_",
+				"y_separation"
+			],
+			[
+				"x_",
+				"x_separation"
+			],
+			[
+				"jsonCol",
+				"jsonColumn"
+			],
+			[
+				"prer",
+				"prereqDepth"
+			],
+			[
+				"getCou",
+				"getCourseDepth"
+			],
+			[
+				"pre",
+				"prereqObj"
+			],
+			[
+				"json",
+				"jsonData"
+			],
+			[
+				"actual",
+				"actual_point"
+			],
+			[
+				"actu",
+				"actual_point"
+			],
+			[
+				"Vis_CI",
+				"Vis_Circle_Fixations"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"rec_ver",
+				"rec_version_float"
+			],
+			[
+				"reco",
+				"record_path"
+			],
+			[
+				"VIDEO",
+				"VIDEO_OUT_ALL"
+			],
+			[
+				"SCRIPT",
+				"SCRIPT_PREVIEW_FIXATIONS"
+			],
+			[
+				"record",
+				"recording_dir"
+			],
+			[
+				"is",
+				"is_fixation"
+			],
+			[
+				"prev",
+				"prev_x"
+			],
+			[
+				"data",
+				"data_point"
+			],
+			[
+				"time",
+				"timestamps_path"
+			],
+			[
+				"write",
+				"write_dir"
+			],
+			[
+				"num",
+				"num_recordings"
+			],
+			[
+				"wri",
+				"write_dir"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "web/js/app.js",
+			"settings":
+			{
+				"buffer_size": 10922,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/js/courses.js",
+			"settings":
+			{
+				"buffer_size": 4719,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/js/lib/bootstrap-min.js",
+			"settings":
+			{
+				"buffer_size": 29110,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/index.html",
+			"settings":
+			{
+				"buffer_size": 3376,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"app_toggle",
+			"toggle",
+			"toggleapp",
+			"toggle_app",
+			"toggleApp showMenuFullscreen"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jamieson/projects/pupil/settings/accuray_test_pt_cloud.npy",
+		"/home/jamieson/projects/pupil/settings/cal_pt_cloud.npy",
+		"/home/jamieson/projects/pupil/settings/eye.log",
+		"/home/jamieson/projects/pupil/settings/user_settings_detector",
+		"/home/jamieson/projects/pupil/settings/user_settings_eye",
+		"/home/jamieson/projects/pupil/settings/user_settings_world",
+		"/home/jamieson/projects/pupil/settings/world.log",
+		"/home/jamieson/projects/angular-phonecat/app/index.html",
+		"/home/jamieson/projects/Floweasy/web/js/app.js",
+		"/home/jamieson/projects/Floweasy/web/js/app/courses.js",
+		"/home/jamieson/projects/Floweasy/web/js/app/courses.json",
+		"/home/jamieson/projects/Floweasy/web/js/app/main.js",
+		"/home/jamieson/pupil/to_jia/019/description.txt",
+		"/home/jamieson/projects/Floweasy/floweasy.sublime-project",
+		"/home/jamieson/Desktop/anotation-jamie/gtea-gaze+/summary-annotation/Yin_Burger.m",
+		"/home/jamieson/Dropbox/egocentric-video-summarization/Data/NOTE!!.txt",
+		"/home/jamieson/projects/CS407/web/polls/models.py",
+		"/home/jamieson/projects/CS407/web/hellodjango/urls.py",
+		"/home/jamieson/projects/CS407/web/polls/urls.py",
+		"/home/jamieson/projects/CS407/web/polls/templates/polls/index.html",
+		"/home/jamieson/projects/CS407/web/polls/templates/polls/detail.html",
+		"/home/jamieson/projects/CS407/web/polls/views.py",
+		"/home/jamieson/pupil/to_jia/012/description.txt",
+		"/home/jamieson/pupil/to_jia/017/info.csv",
+		"/home/jamieson/pupil/to_jia/017/gaze_table.txt",
+		"/home/jamieson/projects/CS407/web/polls/templates/index.html",
+		"/home/jamieson/projects/Floweasy/web/css/bootstrap.min.css",
+		"/home/jamieson/pupil/2014_02_28/000/description.txt",
+		"/home/jamieson/projects/Floweasy/web/index.html",
+		"/home/jamieson/projects/CS407/web/polls/view",
+		"/home/jamieson/pupil/2014_03_04/001/description.txt",
+		"/home/jamieson/pupil/2014_03_04/000/description.txt",
+		"/home/jamieson/projects/Floweasy/web/js/lib/domReady.js",
+		"/home/jamieson/projects/Floweasy/web/js/main.js",
+		"/home/jamieson/projects/Floweasy/upload",
+		"/home/jamieson/external/public_html/floweasy/index.html",
+		"/home/jamieson/projects/upload",
+		"/home/jamieson/external/public_html/floweasy/app.js",
+		"/home/jamieson/pupil/to_jia/011/description.txt",
+		"/home/jamieson/pupil/to_jia/010/description.txt",
+		"/home/jamieson/pupil/to_jia/009/description.txt",
+		"/home/jamieson/pupil/to_jia/010/descr",
+		"/home/jamieson/pupil/to_jia/008/description.txt",
+		"/home/jamieson/pupil/to_jia/007/description.txt",
+		"/home/jamieson/pupil/to_jia/006/description.txt",
+		"/home/jamieson/pupil/to_jia/005/description.txt",
+		"/home/jamieson/pupil/to_jia/004/description.txt",
+		"/home/jamieson/pupil/to_jia/003/description.txt",
+		"/home/jamieson/pupil/accepted_videos.txt",
+		"/home/jamieson/pupil/to_jia/002/description.txt",
+		"/home/jamieson/pupil/to_jia/001/description.txt",
+		"/home/jamieson/pupil/to_jia/000/description.txt",
+		"/home/jamieson/pupil/2014_03_03/001/description.txt",
+		"/home/jamieson/projects/Floweasy/web/js/lib/raphael-min.js",
+		"/home/jamieson/projects/Floweasy/web/js/lib/bootstrap-min.js",
+		"/home/jamieson/pupil/2014_03_03/000/description.txt",
+		"/home/jamieson/projects/Floweasy/web/js/courses.js",
+		"/home/jamieson/projects/Floweasy/web/js/lib/bootstrap.min.js",
+		"/home/jamieson/projects/Floweasy/web/js/require.js",
+		"/home/jamieson/Desktop/todo.txt",
+		"/home/jamieson/projects/Floweasy/web/courses.json",
+		"/home/jamieson/projects/Floweasy/web/app.js",
+		"/home/jamieson/Dropbox/Misc/Passwords.txt",
+		"/home/jamieson/projects/hackathon/plans.txt",
+		"/home/jamieson/projects/CS407/web/polls/polls/index.html",
+		"/home/jamieson/external/matlab/sandbox.m",
+		"/home/jamieson/external/matlab/hwk6run.m",
+		"/home/jamieson/external/matlab/hwk6.lst",
+		"/home/jamieson/external/matlab/hw4run.m",
+		"/home/jamieson/external/matlab/hwk3run.m",
+		"/etc/NetworkManager/system-connections/eduroam",
+		"/etc/pam.d/lightdm",
+		"/home/jamieson/Dropbox/School/Career/ACP/Status update 2-25",
+		"/home/jamieson/pupil/2014_02_27/001/description.txt",
+		"/home/jamieson/pupil/2014_02_27/000/description.txt",
+		"/home/jamieson/projects/CS407/web/hellodjango/settings.py",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/player/vis_circle_fixations.py",
+		"/home/jamieson/projects/CS407/web/polls/admin.py",
+		"/home/jamieson/projects/CS407/web/hellodjango/templates/admin/base_site.html",
+		"/home/jamieson/projects/CS407/web/push_to_heroku.py",
+		"/home/jamieson/pupil/2014_02_23/000/surface_definitions",
+		"/run/user/1000/gvfs/mtp:host=%5Busb%3A002%2C004%5D/Phone/payloadAndroid.txt",
+		"/home/jamieson/projects/CS407/.gitignore",
+		"/home/jamieson/projects/CS407/web/polls/models.pyc",
+		"/home/jamieson/projects/CS407/web/beacon/admin.py",
+		"/home/jamieson/projects/CS407/web/beacon/tests.py",
+		"/home/jamieson/projects/CS407/web/beacon/views.py",
+		"/home/jamieson/projects/CS407/web/beacon/__init__.py",
+		"/home/jamieson/projects/CS407/web/beacon/models.py",
+		"/home/jamieson/projects/CS407/web/hellodjango/settings.pyc",
+		"/home/jamieson/projects/ionicApp/README.md",
+		"/home/jamieson/projects/angular-phonecat/index.html",
+		"/home/jamieson/projects/ionicApp/www/js/app.js",
+		"/home/jamieson/projects/ionicApp/www/index.html",
+		"/home/jamieson/.bashrc",
+		"/home/jamieson/Dropbox/School/Classes/2013-2014 Spring/office_hours.txt",
+		"/home/jamieson/projects/CS407/web/hellodjango/__init__.py",
+		"/home/jamieson/projects/CS407/web/hellodjango/wsgi.py",
+		"/home/jamieson/Desktop/test.py",
+		"/home/jamieson/projects/ionicApp/LICENSE",
+		"/home/jamieson/.bash_profile",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/player/main.py",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/player/scan_path.py",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/simple_player/simple_circle_fixations_only.py",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/player/vis_circle.py",
+		"/home/jamieson/Desktop/out.txt.txt",
+		"/home/jamieson/Desktop/out.jpg.txt",
+		"/home/jamieson/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/jamieson/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Inspiration/Gray theme/Tech 2.url",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Website/Working/index.html",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Website/Working/css/style.css",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Inspiration/Gray theme/About page 1.url",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Inspiration/Gray theme/About page 2.url",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Inspiration/Gray theme/Blog 1.url",
+		"/home/jamieson/Dropbox/Programming/Portfolio/Inspiration/Gray theme/Tech 1.url",
+		"/home/jamieson/Downloads/fontawesome-webfont.eot",
+		"/home/jamieson/.ssh/config",
+		"/home/jamieson/Downloads/todo.txt_cli-2.10/todo.cfg",
+		"/home/jamieson/Desktop/5-minute tasks.todo",
+		"/home/jamieson/Downloads/todo.txt_cli-2.10/todo_completion",
+		"/home/jamieson/pupil/2014_02_23/000/description.txt",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/player/player_methods.py",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/shared_modules/methods.py",
+		"/home/jamieson/Dropbox/Programming/Vikas/pupil/repo/pupil/pupil_src/simple_player/simple_circle.py",
+		"/home/jamieson/pupil/test_video.py",
+		"/home/jamieson/Desktop/Make recording.desktop",
+		"/home/jamieson/pupil/2014_02_22/000/description.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"json",
+			"courses.json",
+			"courses.",
+			"coursesInDepartment",
+			"app",
+			"script",
+			"Raphael",
+			"raphael",
+			"Raphael",
+			"$",
+			"jQuery",
+			"FFF",
+			"constructBox",
+			"test",
+			"connections",
+			"move",
+			"constructBox",
+			"test",
+			"constructBox",
+			"construct",
+			"textwrap",
+			"construct",
+			"Wrap",
+			"wrap",
+			"makeWrappedText",
+			"fill-opacity",
+			"connections",
+			"css",
+			"186",
+			"getCourseDepth",
+			"getCourseJson",
+			"getCourseDepth",
+			"getCourseJson",
+			"makeTree",
+			"getCourseDepth",
+			"getCourseJson",
+			"columns",
+			"el",
+			"drag",
+			"el",
+			"drag",
+			"rafael",
+			"raphael",
+			"holder",
+			"$",
+			"bootstrap",
+			"static",
+			"template",
+			"poll",
+			"gnome",
+			"width",
+			"circle",
+			"Circle",
+			"circle",
+			"1000ms",
+			"font",
+			"h1",
+			"callout",
+			"line-height",
+			"font",
+			"fixations",
+			"get_fixations",
+			"prevgray",
+			"past_gray",
+			"vis_circle",
+			"circle",
+			"player_methods",
+			"transparent_cirlce",
+			"plugins",
+			"load",
+			"settings",
+			"script_pre",
+			"open",
+			"writer",
+			"save_video",
+			"save",
+			"manhattan_dist",
+			"no_frames",
+			"time",
+			"nt",
+			"time",
+			"overlay",
+			"os.path",
+			"home",
+			"manhattan_dist",
+			"timestamps",
+			"manhattan_dist",
+			"fixation",
+			"cap",
+			"recordings",
+			"record",
+			"toggle_server",
+			"g.plugins",
+			"plugin",
+			"world",
+			"process",
+			"Process",
+			"argv",
+			"shared_pos",
+			"open",
+			" ",
+			"link_lib",
+			"glfw_libraries",
+			"glfw_librar",
+			"glfw_lib",
+			"glfw_librar",
+			"glfw_librari",
+			"glfw_l",
+			"ubuntu",
+			"glfw_LIBRARIES",
+			"library",
+			"thread",
+			"append glfw_libraries",
+			"glfw_libraries",
+			"EGL_INCLUDE_DIR",
+			"glfw_INCLUDE_DIRS",
+			"librar",
+			"ps1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"courses",
+			"jsonColumns",
+			"200ms",
+			"self.past_gray",
+			"Vis_Circle_Fixations",
+			"\n",
+			"\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "web/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10276,
+								10276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4485.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "web/js/courses.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2932,
+								2932
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 714.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web/js/lib/bootstrap-min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "web/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								473,
+								473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "floweasy.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 166.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

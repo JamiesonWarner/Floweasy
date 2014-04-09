@@ -5,16 +5,21 @@ Raphael.fn.connection = function (obj1, obj2, line, bg) {
         obj2 = line.to;
     }
     var bb1 = obj1.getBBox(),
-    bb2 = obj2.getBBox(),
-    p = [{x: bb1.x + bb1.width / 2, y: bb1.y - 1},
-    {x: bb1.x + bb1.width / 2, y: bb1.y + bb1.height + 1},
-    {x: bb1.x - 1, y: bb1.y + bb1.height / 2},
-    {x: bb1.x + bb1.width + 1, y: bb1.y + bb1.height / 2},
+        bb2 = obj2.getBBox();
+
+
+
+    // The possible bounding locations for these boxes.
+    p = [{x: bb1.x + bb1.width / 2, y: bb1.y - 1}, // top
+    {x: bb1.x + bb1.width / 2, y: bb1.y + bb1.height + 1}, // bottom
+    {x: bb1.x - 1, y: bb1.y + bb1.height / 2}, // left
+    {x: bb1.x + bb1.width + 1, y: bb1.y + bb1.height / 2}, // right
     {x: bb2.x + bb2.width / 2, y: bb2.y - 1},
     {x: bb2.x + bb2.width / 2, y: bb2.y + bb2.height + 1},
     {x: bb2.x - 1, y: bb2.y + bb2.height / 2},
     {x: bb2.x + bb2.width + 1, y: bb2.y + bb2.height / 2}],
     d = {}, dis = [];
+    // Find the correct side pairing to put this on
     for (var i = 0; i < 4; i++) {
         for (var j = 4; j < 8; j++) {
             var dx = Math.abs(p[i].x - p[j].x),
@@ -31,9 +36,19 @@ Raphael.fn.connection = function (obj1, obj2, line, bg) {
         res = d[Math.min.apply(Math, dis)];
     }
     var x1 = p[res[0]].x,
-    y1 = p[res[0]].y,
-    x4 = p[res[1]].x,
-    y4 = p[res[1]].y;
+        y1 = p[res[0]].y,
+        x4 = p[res[1]].x,
+        y4 = p[res[1]].y;
+
+    // Added in: always choose the right side of the first box
+    // and the left side of the second box
+    x1 = bb1.x + bb1.width + 1;
+    y1 = bb1.y + bb1.height / 2;
+    x4 = bb2.x - 1;
+    y4 = bb2.y + bb2.height / 2;
+
+    // Find a dx, dy for the central point to make a nice cubic curve
+    // TODO get rid of min and max, that's special case code if boxes are too close
     dx = Math.max(Math.abs(x1 - x4) / 2, 10);
     dy = Math.max(Math.abs(y1 - y4) / 2, 10);
     var x2 = [x1, x1, x1 - dx, x1 + dx][res[0]].toFixed(3),
@@ -321,8 +336,6 @@ function loadDepartment(department) {
 }
 
 
-
-
 var r;
 var connections = [];
 var coursesJson;
@@ -330,10 +343,12 @@ var currentDepartment = "Computer Science";
 var departments = [];
 var boxes = [];
 
-window.onload = function () {
+function init() {
+    console.log("Window loaded!");
+
     r = Raphael("holder", $('#holder').width(), 1300);
 
-    $.getJSON( "courses.json", function( data ) {
+    $.getJSON( "js/courses.json", function( data ) {
         // Build our list of departments
         for (dep in data) {
             departments.push(dep);
@@ -355,6 +370,9 @@ window.onload = function () {
      $("#math").click(function(e) {
         loadDepartment("Mathematics");
     });
+}
 
-};
-
+// We know our window is ready at this point
+window.onload = function(){
+    init();
+}
